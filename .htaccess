@@ -1,0 +1,7 @@
+# Keshing of browse
+RewriteEngine On
+RewriteRule ^index.html$ / [QSA,R]
+
+#Redirect 301 for all pages
+RewriteCond %{HTTP_HOST} ^www.web-expert.esy.es\.com$ [NC]
+RewriteRule ^(.*)$ http://web-expert.esy.es/$1 [R=301,L]
